@@ -1,12 +1,13 @@
 import './App.css';
-import { Video } from './components/youtube';
+import { Rows } from './components/Rows';
 
 
 function App() {
   return (
     <div className="App">
-      <p>からだよ</p>
-      <Video />
+      <p>リゾート地のライブカメラで旅行気分を味わう</p>
+      <Rows />
+      <address>(C) Shumpei All Rights Reserved.</address>
     </div>
   );
 }
