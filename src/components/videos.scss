@@ -1,4 +1,24 @@
-.Row {
-    display: flex;
-    justify-content: center;
+.Rows {
+
+    .row {
+        width: 660px;
+        margin: 16px auto;
+        transition-timing-function: ease-in;
+        transition: all 0.5s;
+        cursor: pointer;
+
+        &:hover {
+            content: '';
+            background-color: white;
+        }
+    }
+
+    .name {
+        margin: 0;
+        margin-bottom: 2px;
+    }
+
+    .title {
+        font-size: 12px;
+    }
 }

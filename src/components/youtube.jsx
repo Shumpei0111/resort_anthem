@@ -2,10 +2,8 @@ import YouTube from 'react-youtube';
 import './videos.scss';
 
 const opts = {
-    // height: '390',
-    // width: '640',
-    height: '195',
-    width: '320',
+    height: '410',
+    width: '660',
     playerVars: {
         autoplay: 0,
     },
@@ -15,24 +13,26 @@ const _onReady = ev => {
     ev.target.pauseVideo();
 }
 
-export const Video = (videosObj) => {
-    const videos = videosObj.videos;
+const _onStateChange = data => {
+    if( data.data !== 0 && data.data !== -1 ) {
+    }
+}
+
+export const Video = (data) => {
+    console.log("video",data.video);
 
     return (
-        <div className="Row">
-            {videos.map((video) => (
-                [
-                    <div className="caption" key={video.name}>
-                        {video.name}
-                        <YouTube
-                            key={video.id}
-                            videoId={video.id}
-                            opts={opts}
-                            onReady={_onReady}
-                        />
-                    </div>
-                ]
-            ))}
+        <div className="Rows">
+            <div className="row">
+                <YouTube
+                    videoId={data.video.id}
+                    opts={opts}
+                    onReady={_onReady}
+                    onStateChange={_onStateChange}
+                />
+                <p className="name">{data.video.name}</p>
+                <span className="title">{data.video.title}</span>
+            </div>
         </div>
     )
 }
