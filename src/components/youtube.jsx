@@ -1,11 +1,11 @@
 import YouTube from 'react-youtube';
-import axios from 'axios';
+import './videos.scss';
 
 const opts = {
-    height: '390',
-    width: '640',
+    height: '410',
+    width: '660',
     playerVars: {
-        autoplay: 1,
+        autoplay: 0,
     },
 };
 
@@ -13,8 +13,26 @@ const _onReady = ev => {
     ev.target.pauseVideo();
 }
 
-export const Video = () => {
+const _onStateChange = data => {
+    if( data.data !== 0 && data.data !== -1 ) {
+    }
+}
+
+export const Video = (data) => {
+    console.log("video",data.video);
+
     return (
-        <YouTube videoId="2g811Eo7K8U" opts={opts} onReady={_onReady} />
+        <div className="Rows">
+            <div className="row">
+                <YouTube
+                    videoId={data.video.id}
+                    opts={opts}
+                    onReady={_onReady}
+                    onStateChange={_onStateChange}
+                />
+                <p className="name">{data.video.name}</p>
+                <span className="title">{data.video.title}</span>
+            </div>
+        </div>
     )
 }
