@@ -1,24 +1,37 @@
 .Rows {
+    position: relative;
 
     .row {
         width: 660px;
         margin: 16px auto;
-        transition-timing-function: ease-in;
-        transition: all 0.5s;
-        cursor: pointer;
-
-        &:hover {
-            content: '';
-            background-color: white;
-        }
     }
 
     .name {
         margin: 0;
+        font-size: 12px;
         margin-bottom: 2px;
     }
 
     .title {
         font-size: 12px;
+    }
+
+    .latlang {
+        text-align: left;
+        word-break: break-all;
+        font-size: 16rem;
+        position: fixed;
+        bottom: 0;
+        overflow: hidden;
+        width: max-content;
+
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #000;
+        color: transparent;
+        line-height: 1;
+        transform-origin: left bottom;
+        -webkit-text-stroke-color: rgb(0, 0, 0);
+        letter-spacing: 0vw;
+        transform: translate(0px, 0px);
     }
 }

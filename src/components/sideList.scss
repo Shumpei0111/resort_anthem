@@ -19,11 +19,20 @@
             cursor: pointer;
 
             border-bottom: 1px solid;
+
+            transition-timing-function: ease-in;
+            transition: all 0.5s;
+            cursor: pointer;
+
+          &:hover {
+              background: white;
+          }
         
           &_id {
               font-size: 10px;
               margin: 0;
           }
         }
+        
     }
 }

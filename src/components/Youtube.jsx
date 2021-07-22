@@ -1,4 +1,6 @@
 import YouTube from 'react-youtube';
+import { useState, useEffect } from 'react';
+import NumberEasing from 'react-number-easing';
 import './videos.scss';
 
 const opts = {
@@ -18,8 +20,22 @@ const _onStateChange = data => {
     }
 }
 
+
 export const Video = (data) => {
-    console.log("video",data.video);
+    const [value0, setValue0] = useState(0);
+    const [value1, setValue1] = useState(0);
+    let intervalId;
+
+    function onUpdate() {
+        const val0 = data.video.latlangNum[0];
+        const val1 = data.video.latlangNum[1];
+        setValue0(val0);
+        setValue1(val1);
+    }
+    useEffect(() => {
+        intervalId = setInterval(() => onUpdate(), 600);
+        return () => clearInterval(intervalId);
+      }, [data.video.latlangNum]);
 
     return (
         <div className="Rows">
@@ -33,6 +49,19 @@ export const Video = (data) => {
                 <p className="name">{data.video.name}</p>
                 <span className="title">{data.video.title}</span>
             </div>
+            <div className="latlang">
+                <NumberEasing
+                  value={value0}
+                  decimals={6}
+                  ease="expoIn"
+                />,
+                <NumberEasing
+                  value={value1}
+                  decimals={6}
+                  ease="expoIn"
+                />
+            </div>
+            {/* <div className="latlang">{data.video.latlang}</div> */}
         </div>
     )
 }
