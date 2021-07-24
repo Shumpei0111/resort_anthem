@@ -1,5 +1,6 @@
 #sideListWrapper {
     padding-left: 16px;
+    z-index: 1;
 
     .location_select_nav {
         padding: 10px 20px;
@@ -15,7 +16,7 @@
         width: 240px;
 
         .location {
-            padding: 16px 0;
+            padding: 16px 0 16px 8px;
             cursor: pointer;
 
             border-bottom: 1px solid;
@@ -25,13 +26,22 @@
             cursor: pointer;
 
           &:hover {
-              background: white;
+              background: #e0e7f8;
           }
         
           &_id {
               font-size: 10px;
               margin: 0;
           }
+        }
+
+        .author {
+            font-size: 12px;
+            padding: 16px 0 16px 8px;
+
+            a {
+                text-decoration: none;
+            }
         }
         
     }

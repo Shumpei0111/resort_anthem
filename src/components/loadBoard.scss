@@ -1,0 +1,27 @@
+#loadBoard {
+    // z-index: 10000;
+    height: 100vh;
+    background: white;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: #e0e7f8;
+
+
+    .loading_str {
+        position: absolute;
+        top: 12%;
+        left:40%;
+        transform:translate(-50%,-50%);
+        font-family: 'Playfair Display SC', serif;
+        font-size: 7rem;
+    }
+
+    &.isLoading {
+        display: block;
+    }
+
+    &.loading_complete {
+        display: none;
+    }
+}

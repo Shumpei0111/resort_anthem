@@ -2,8 +2,13 @@
     position: relative;
 
     .row {
-        width: 660px;
+        width: 800px;
         margin: 16px auto;
+
+        &_links {
+            display: flex;
+            justify-content: center;
+        }
     }
 
     .name {
@@ -16,21 +21,22 @@
         font-size: 12px;
     }
 
-    .latlang {
+    .latlong {
         text-align: left;
         word-break: break-all;
         font-size: 16rem;
         position: fixed;
         bottom: 0;
+        left: 0;
         overflow: hidden;
         width: max-content;
+        z-index: -1;
 
         -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: #000;
+        -webkit-text-stroke-color: rgb(224, 231, 248);
         color: transparent;
         line-height: 1;
         transform-origin: left bottom;
-        -webkit-text-stroke-color: rgb(0, 0, 0);
         letter-spacing: 0vw;
         transform: translate(0px, 0px);
     }

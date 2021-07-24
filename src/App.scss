@@ -4,7 +4,7 @@ body {
   font-family: 'Adamina', Meiryo, sans-serif;
   font-feature-settings: "palt";
   letter-spacing: 1px;
-  background: darkslategrey;
+  background: #7ab3b8;
 }
 
 .App {
@@ -17,9 +17,12 @@ body {
   #title {
     color: white;
     margin: 0;
+    text-align: left;
+    margin-left: 16px;
 
     p {
       margin: 0;
+      font-size: 12px;
     }
   }
 
@@ -69,5 +72,6 @@ body {
 
   #container {
     display: flex;
+    margin-top: 24px;
   }
 }

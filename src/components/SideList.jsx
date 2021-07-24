@@ -21,6 +21,9 @@ export const SideList = ( props ) => {
                         </li>
                     ]
                 ))}
+                <li className="author">
+                    <a className="sns" href="https://twitter.com/seventhseven" target="_blank" rel="noopener noreferrer">Twitter</a>
+                </li>
             </ul>
             <address>(C) Shumpei All Rights Reserved.</address>
         </div>

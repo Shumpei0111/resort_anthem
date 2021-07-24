@@ -4,8 +4,8 @@ import NumberEasing from 'react-number-easing';
 import './videos.scss';
 
 const opts = {
-    height: '410',
-    width: '660',
+    height: '550',
+    width: '800',
     playerVars: {
         autoplay: 0,
     },
@@ -24,18 +24,18 @@ const _onStateChange = data => {
 export const Video = (data) => {
     const [value0, setValue0] = useState(0);
     const [value1, setValue1] = useState(0);
-    let intervalId;
 
-    function onUpdate() {
-        const val0 = data.video.latlangNum[0];
-        const val1 = data.video.latlangNum[1];
-        setValue0(val0);
-        setValue1(val1);
-    }
     useEffect(() => {
-        intervalId = setInterval(() => onUpdate(), 600);
+        function onUpdate() {
+            const val0 = data.video.latlongNum[0];
+            const val1 = data.video.latlongNum[1];
+            setValue0(val0);
+            setValue1(val1);
+        }
+
+        let intervalId = setInterval(() => onUpdate(), 600);
         return () => clearInterval(intervalId);
-      }, [data.video.latlangNum]);
+      }, [data.video.latlongNum]);
 
     return (
         <div className="Rows">
@@ -48,8 +48,14 @@ export const Video = (data) => {
                 />
                 <p className="name">{data.video.name}</p>
                 <span className="title">{data.video.title}</span>
+                <p>{data.video.latlong}</p>
+                <div className="row_links">
+                    <p><a href={data.video.gmap} target="_blank" rel="noopener noreferrer">Google Map</a></p>
+                    <p>&nbsp;|&nbsp;</p>
+                    <p><a href={data.video.wikiUrl} target="_blank" rel="noopener noreferrer">wikipedia</a></p>
+                </div>
             </div>
-            <div className="latlang">
+            <div className="latlong">
                 <NumberEasing
                   value={value0}
                   decimals={6}
@@ -61,7 +67,6 @@ export const Video = (data) => {
                   ease="expoIn"
                 />
             </div>
-            {/* <div className="latlang">{data.video.latlang}</div> */}
         </div>
     )
 }
