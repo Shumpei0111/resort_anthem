@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+# ライブカメラでリゾート気分を味わう「PRESENT RESORT POINT」
+[企画URL](https://crieit.net/boards/web1week-202107/PRESENT-RESORT-POINT)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+※このリポジトリはTwitter上の企画「web1week」に参加したときに作成したものになります。
+１週間で出されたお題をもとに、自ら企画をたて実装、リリースまで行いました。
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+Web1Weekは初参加です。
+今回テーマが「バケーション」なので、行けない旅行の気分を少しでも紛れることはないか…と考え、
+YouTubeにアップされているリゾート地のライブカメラ映像を表示するアプリを作りました。
 
-### `npm start`
+使用技術は、以下の通り。
+- React
+- react-youtube
+- framer-motion　
+- react-number-easing
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+普段はVue.jsかjQueryを使用することが多いため、練習のためReactを使用しました。
+また、アニメーション系もさわってみたかったので、framer-motion、react-number-easingを使用しました。
+非常に簡単に設定できた部分が多く、ドキュメントを読み込めばもっと色々できるだろうなと感じました。
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+規模が小さいため、状態管理はローカルのhooksで済ませています。
+また、ページ遷移もないため、低い難易度に設定して、１週間で終わらせることを目標としました。
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+今後も機会があれば参加したいと思います！
