@@ -1,3 +1,16 @@
+// const base = {
+//     title: "",
+//     id: "",
+//     name: "",
+//     enName: "",
+//     wikiUrl: "",
+//     site: "",
+//     latlong: ``,
+//     latlongNum: [],
+//     gmap: "",
+// };
+
+
 export const videoList = [
     {
         title: "Crystal Bay Yacht Club Live Stream From Lamai, Koh Samui, Thailand | Live HD Webcam | SamuiWebcam",
@@ -5,6 +18,7 @@ export const videoList = [
         name: "サムイ島",
         enName: "Koh Samui",
         wikiUrl: "https://ja.wikipedia.org/wiki/%E3%82%B5%E3%83%A0%E3%82%A4%E5%B3%B6",
+        site: "",
         latlong: `9°28'37.0"N 100°04'04.9"E`,
         latlongNum: [9.476954, 100.068018],
         gmap: "https://www.google.co.jp/maps/place/9%C2%B028'37.0%22N+100%C2%B004'04.9%22E/@9.476954,100.065824,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d9.476954!4d100.068018?hl=ja",
@@ -15,6 +29,7 @@ export const videoList = [
         name: "カストリクム",
         enName: "Castricum",
         wikiUrl: "https://ja.wikipedia.org/wiki/%E3%82%AB%E3%82%B9%E3%83%88%E3%83%AA%E3%82%AF%E3%83%A0",
+        site: "",
         latlong: `52°33'22.9"N 4°36'22.4"E`,
         latlongNum: [52.556355, 4.606229],
         gmap: "https://www.google.co.jp/maps/place/52%C2%B033'22.9%22N+4%C2%B036'22.4%22E/@52.556355,4.604035,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d52.556355!4d4.606229?hl=ja",
@@ -25,8 +40,20 @@ export const videoList = [
         name: "ヨスト・ヴァン・ダイク島",
         enName: "Jost Van Dyke",
         wikiUrl: "https://ja.wikipedia.org/wiki/%E3%83%A8%E3%82%B9%E3%83%88%E3%83%BB%E3%83%B4%E3%82%A1%E3%83%B3%E3%83%BB%E3%83%80%E3%82%A4%E3%82%AF%E5%B3%B6",
+        site: "",
         latlong: `18°26'35.0"N 64°45'50.4"W`,
         latlongNum: [18.443065, -64.764009],
         gmap: "https://www.google.co.jp/maps/place/18%C2%B026'35.0%22N+64%C2%B045'50.4%22W/@18.443065,-64.766203,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d18.443065!4d-64.764009?hl=ja",
+    },
+    {
+        title: "BaoBab Extra Cam From Lamai Beach, Koh Samui, Thailand | Live HD Webcam | SamuiWebcam",
+        id: "f_8KNAjCUow",
+        name: "レストラン バオバブ",
+        enName: "Baobab Restaurant",
+        wikiUrl: "",
+        site: "https://www.facebook.com/Baobab-Restaurant-1425265817691133/",
+        latlong: ``,
+        latlongNum: [9.4581845,100.0424792],
+        gmap: "https://www.google.com/maps/place/Baobab+Restaurant/@9.4581845,100.0424792,15z/data=!4m12!1m6!3m5!1s0x0:0xc3c78a4c21bc76e8!2sBaobab+Restaurant!8m2!3d9.4581845!4d100.0424792!3m4!1s0x0:0xc3c78a4c21bc76e8!8m2!3d9.4581845!4d100.0424792",
     },
 ];

@@ -51,8 +51,20 @@ export const Video = (data) => {
                 <p>{data.video.latlong}</p>
                 <div className="row_links">
                     <p><a href={data.video.gmap} target="_blank" rel="noopener noreferrer">Google Map</a></p>
-                    <p>&nbsp;|&nbsp;</p>
-                    <p><a href={data.video.wikiUrl} target="_blank" rel="noopener noreferrer">wikipedia</a></p>
+                    {/** wikipedia */
+                        (() => {
+                        if( data.video.wikiUrl ) {
+                            return <div className="aaa"><p>&nbsp;|&nbsp;</p><p><a href={data.video.wikiUrl} target="_blank" rel="noopener noreferrer">wikipedia</a></p></div>
+                        }
+                    })()
+                    }
+                    {/** official site */
+                        (() => {
+                        if( data.video.site ) {
+                            return <div className="aaa"><p>&nbsp;|&nbsp;</p><p><a href={data.video.site} target="_blank" rel="noopener noreferrer">公式サイト</a></p></div>
+                        }
+                    })()
+                    }
                 </div>
             </div>
             <div className="latlong">
