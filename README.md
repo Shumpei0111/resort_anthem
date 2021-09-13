@@ -13,7 +13,7 @@ YouTubeにアップされているリゾート地のライブカメラ映像を�
 使用技術は、以下の通り。
 - React
 - react-youtube
-- framer-motion　
+- framer-motion
 - react-number-easing
 
 普段はVue.jsかjQueryを使用することが多いため、練習のためReactを使用しました。
