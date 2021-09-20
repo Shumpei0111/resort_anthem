@@ -1,6 +1,10 @@
 #sideListWrapper {
     padding-left: 16px;
     z-index: 1;
+    overflow-y: scroll;
+    position: fixed;
+    width: 260px;
+    height: calc(100vh - 104px);
 
     .location_select_nav {
         padding: 10px 20px;

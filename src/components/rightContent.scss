@@ -1,3 +1,6 @@
 #rightContent {
-    width: 100%;
+    position: fixed;
+    left: 270px;
+    height: calc(100vh - 104px);
+    width: calc(100% - 270px);
 }

@@ -2,8 +2,8 @@
     position: relative;
 
     .row {
-        width: 800px;
-        margin: 16px auto;
+        // width: 800px;
+        margin: 80px 0 16px;
 
         &_links {
             display: flex;
@@ -26,7 +26,7 @@
     }
 
     .latlong {
-        text-align: left;
+        text-align: right;
         word-break: break-all;
         font-size: 16rem;
         position: fixed;
