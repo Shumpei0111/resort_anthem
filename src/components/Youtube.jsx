@@ -3,13 +3,33 @@ import { useState, useEffect } from 'react';
 import NumberEasing from 'react-number-easing';
 import './videos.scss';
 
+const SIDE_LIST_WIDTH = 276;
+
+const settingOption = () => {
+    const setVideoWidth = (() => {
+        const inner = window.innerWidth;
+        const res   = inner - SIDE_LIST_WIDTH;
+        if( res < 0 ) {
+            throw new Error( 'When set to video width, smaller than zero.' );
+        }
+        return String( res );
+    })();
+
+    return setVideoWidth;
+};
+
 const opts = {
     height: '550',
-    width: '800',
+    width: '0',
     playerVars: {
-        autoplay: 0,
+        autoplay: 1,
     },
 };
+
+// iframeの横幅の決定
+opts.width = settingOption();
+
+
 
 const _onReady = ev => {
     ev.target.pauseVideo();
@@ -39,7 +59,7 @@ export const Video = (data) => {
 
     return (
         <div className="Rows">
-            <div className="row">
+            <div id={data.video.id} className="row" role="tabpanel">
                 <YouTube
                     videoId={data.video.id}
                     opts={opts}
@@ -61,7 +81,7 @@ export const Video = (data) => {
                     {/** official site */
                         (() => {
                         if( data.video.site ) {
-                            return <div className="aaa"><p>&nbsp;|&nbsp;</p><p><a href={data.video.site} target="_blank" rel="noopener noreferrer">公式サイト</a></p></div>
+                            return <div className="aaa"><p>&nbsp;|&nbsp;</p><p><a href={data.video.site} target="_blank" rel="noopener noreferrer">もっと見る</a></p></div>
                         }
                     })()
                     }
