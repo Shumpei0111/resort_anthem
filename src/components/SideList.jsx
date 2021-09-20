@@ -1,23 +1,30 @@
+import { useEffect, useState } from "react";
 import { videoList } from "../assets/video-list";
 import './sideList.scss';
 
 export const SideList = ( props ) => {
     const items = videoList.slice();
 
+
     const clikEv = index => {
-        props.effect(videoList[index]);
+        props.effect(items[index]);
+        setVdId( index );
     };
+
+    const [ vdId, setVdId ] = useState( props.vdId );
+
+    useEffect(() => {
+    },[vdId]);
 
     return(
         <div id="sideListWrapper">
             <p className="location_select_nav">Location Select</p>
-            <ul id="sideList">
+            <ul id="sideList" role="tablist">
                 {items.map((item,index) => (
                     [
-                        <li data-location={item.id} onClick={()=> clikEv(index)} className="location" key={item.id}>
-                            <p className="location_id">{item.enName}</p>
+                        <li data-location={item.id} role="presentation" onClick={()=> clikEv(index)} className={`location tab_${index}`} key={item.id}>
+                            <p aria-controls={item.id} aria-selected={ vdId === index } className="location_id">{item.enName}</p>
                             <span>{item.name}</span>
-                            <p className="location_id">{item.id}</p>
                         </li>
                     ]
                 ))}
