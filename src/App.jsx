@@ -13,7 +13,7 @@ function App() {
       <LoadBoard />
       <div id="title">
         <h1>Present Resort Point</h1>
-        <p>Feel like you're traveling with a live camera at the resort</p>
+        <p>Feel like you're traveling with a live camera at the resort | 世界各地にあるライブカメラで旅行しよう</p>
       </div>
       <div id="container">
         <SideList effect={emit}/>
