@@ -22,7 +22,7 @@ export const SideList = ( props ) => {
             <ul id="sideList" role="tablist">
                 {items.map((item,index) => (
                     [
-                        <li data-location={item.id} role="presentation" onClick={()=> clikEv(index)} className={`location tab_${index}`} key={item.id}>
+                        <li data-location={item.id} role="presentation" onClick={()=> clikEv(index)} className={`location ${vdId === index ? "current_selected":""}`} key={item.id}>
                             <p aria-controls={item.id} aria-selected={ vdId === index } className="location_id">{item.enName}</p>
                             <span>{item.name}</span>
                         </li>
